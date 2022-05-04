@@ -1,0 +1,20 @@
+{
+  "name": "quiencumplehoy",
+  "productName": "quiencumplehoy",
+  "version": "0.023b.3.2022",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron src/index.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/img/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --icon=src/img/icon.ico --prune=true --out=release-builds",
+    "package-linux": "electron-packager . cumple-app --overwrite --asar=true --platform=linux --arch=x64 --icon=src/img/icon.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "acamus79",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^17.2.0",
+    "electron-packager": "^15.4.0"
+  }
+}

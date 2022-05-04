@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumples</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- links para bootswatch alyternativo de bootstrap-->
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <!-- links para jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- links para exportar a excel -->
+    <script src="https://unpkg.com/xlsx@0.16.9/dist/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+</head>
+
+<body class="row justify-content-center align-items-center vh-100">
+    <div class="container p-4 bg-white text-center">
+        <h3>...quien cumple años hoy?</h3>
+    </div>    
+        <div class="container p-4">
+            <table class="table table-bordered" id="tabla">
+                <button id="btnExportar" class="btn-success">
+                    <i class="fas fa-file-excel"> </i> Exportar a Excel
+                </button>
+                <tr  class="bg-info text-center">
+                    <th>Nro</th>
+                    <th>Sexo</th>
+                    <th>Nombres</th>  
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>E-Mail</th>
+                </tr>
+            <tbody id="miTabla"></tbody>
+            </table>
+        </div>
+    </body>
+</html>
+
+<!-- script para exportar a excel -->
+<script>
+    const $btnExportar = document.querySelector("#btnExportar"),
+        $tabla = document.querySelector("#tabla");
+        $btnExportar.addEventListener("click", function() {
+    let tableExport = new TableExport($tabla, {
+        exportButtons: false, // No queremos botones
+        filename: "cumples_today", //Nombre del archivo de Excel
+        sheetname: "today", //Título de la hoja
+        formats: ["xlsx", "csv", "txt"], 
+    });
+    let datos = tableExport.getExportData();
+    let preferenciasDocumento = datos.tabla.xlsx;
+    tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
+    });
+</script>
+
+<!-- script para conectar a la API recorrer el JSON y transformarlo en una Tabla HTML -->
+<script>
+    const app = document.querySelector('.container');
+    const url = 'https://aec-quiencumple.herokuapp.com/cumples/hoy';
+    
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(api => {
+            var y = new Date().getFullYear();//para obtener el año actual
+            var table = document.getElementById('miTabla')//jenero un elemento html segun su Id
+                for (var i = 0; i < data.length; i++)
+                {
+                    var fila = 
+                        `<tr>
+                            <td>${i+1}</td>    
+                            <td>${data[i].sexo}</td>
+                            <td>${data[i].nombres}</td>
+                            <td>${data[i].apellidos}</td>
+                            <td>${y-data[i].anio}</td>
+                            <td>${data[i].email}</td>
+                       </tr>`
+                table.innerHTML += fila
+                }
+            app.appendChild(api)
+        });
+    })
+    .catch(err => console.log(err));
+    
+   
+    </script>

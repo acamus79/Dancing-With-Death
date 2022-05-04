@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.aec.dwd.DancingWithDeathApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.17 s - in com.aec.dwd.DancingWithDeathApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.365 s - in com.aec.dwd.DancingWithDeathApplicationTests

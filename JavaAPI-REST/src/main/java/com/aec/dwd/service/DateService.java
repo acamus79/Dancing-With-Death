@@ -17,5 +17,7 @@ public interface DateService {
     public void delete(String id);
     
     public DateDTO getDetails(String id);
+    
+    public List<DateDTO> getDate(DateDTO day);
 
 }

@@ -1,91 +1,135 @@
-*{
-	box-sizing: border-box;
- }
+/*
+ 
+*/
 
-body{
-	display : flexbox;
-	flex-direction : column;
+* {
+    margin:0;
+    padding:0;
+  }
+
+  html {
+	min-height: 100%;
+	position: relative;
+}
+  
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 0;
+	margin-bottom: 40px;
+	clear: left;
+	clear: right;
 }
 
 header{
 	background-color: #04324c;
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	height: 3em;
 	color: #FFF;
-	margin-bottom: 1em;
 	padding: 4px;
+	align-items: center;
 }
 
-header h1{
+header a{
+	padding: 4px;
 	font-size: 2em;
 	display:inline-block;
 	vertical-align:	middle;
+	margin-left: 1em;
 }
 
-header .container:before{
-	content: '';
-	display:inline-block;
-	height: 100%;
-	vertical-align:	middle;
-}
-
-section{
-	margin: 2em 0;
-	overflow: hidden;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	display : flex;
-	flex-direction : row;
-}
-
-::placeholder {
-	color: blue;
-	font-size: 1.5em;
+  body {
+    font-size:60.5%;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+	margin-bottom: 40px;
+    transition: 0.7s all;
+  }
+  .content {
+    max-width: 960px;
+    margin:0 auto;
+    font-size:2.5em;
+  }
+  
+  a{
+    color: aliceblue;
+    text-align: justify;
+    margin: auto 1em auto;
+    text-decoration: none;
+  }
+  a:hover{
+    color: rgb(86, 134, 176);
   }
 
-.encriptar{
-	padding: 0.8em;
-	width: 40%;
-	height: 20em;
-	margin: auto;
-	display : flex;
-	flex-direction : column;
-	align-items: center;
-	border-radius: 10px;
-}
+  header, 
+  nav,
+  footer {
+    background-color: #04324c;
+    border-radius: .5em;
+    margin: 0.5em auto;
+    padding: 0.25em;
+    text-align: center;
+  }
 
-.desencriptar{
-	padding: 0.8em;
-	width: 40%;
-	height: 20em;
-	margin: auto;
-	display : flex;
-	flex-direction : column;
-	border-radius: 10px;
-	border-color: #588198;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-	align-items: center;
-}
+  footer{
+    margin-top: 2em;
+  }
 
-#frase{
+  #ic{
+    margin:0 0.2em 0 ;
+    color: rgb(86, 134, 176);
+  }
+
+  #ic:hover{
+    color: aliceblue;
+  }
+
+  #content {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #principal,
+  aside {
+    border-radius: .5em;
+    display: inline-block;
+    margin: 0 auto;
+    min-height: 300px;
+    padding: .25em 0;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  aside {
+    margin-top:0.5em;
+  }
+
+#tabla{
+    font-size: 100%;
 	padding: 10px;
 	width: 95%;
-	height: 88%;
+	height: 25em;
 	margin: auto;
 	border-radius: 10px;
 	resize:none;
 	border: none;
 }
 
+::placeholder {
+	text-align: center;
+	font-size: 1.2em;
+	font-style: italic;
+}
+
 #textoEncriptado{
-	background-image: url(/img/encriptar.png);
+    font-size: 100%;
+	background-image: url(/assets/img/encriptar2.png);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
-	object-fit: contain;
+	object-fit: fill;
 	padding: 10px;
 	width: 95%;
-	height: 88%;
+	height: 25em;
 	margin: auto;
 	border-radius: 10px;
 	resize:none;
@@ -93,8 +137,8 @@ section{
 }
 
 .btn{
-	margin: 5px 15px;
-	display : inline;
+	margin-top: 2em;
+	margin-right: 2em;
 	width: 8em;
 	height: 3em;
 	border-radius: 15px;
@@ -102,7 +146,7 @@ section{
 	font-weight: bold;
 	text-transform: capitalize;
 	background: #FFF;
-	transition: 0.8s all;
+	transition: 0.7s all;
 	border-color: #135074;
 }
 
@@ -122,11 +166,25 @@ section{
 	background-color: #c3d6e1;
 	color: black;
 }
-
-.footer{
-	padding: 20px;
-	color: aliceblue;
-	font-weight: bold;
-	text-align: center;
-	background-color: #04324c;
-}
+  
+  /* MEDIA QUERY */
+  @media  screen and (min-width:480px){
+    header a {
+      font-size: 2em;
+    }
+    footer{
+      margin-top: 1em;
+    }
+    #ic{
+      margin-right: 2em;
+    }
+    #principal {
+      width: 60%;
+    }
+    aside {
+      width: 29%;
+      margin-top:0;
+    }
+ 
+  }
+  

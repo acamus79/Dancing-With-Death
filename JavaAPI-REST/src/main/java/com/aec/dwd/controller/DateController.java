@@ -46,6 +46,12 @@ public class DateController {
     public List<DateDTO> getAllDate(){
         return dService.getAll();
     }
+    
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @PostMapping("/date")
+    public List<DateDTO> getDay(@RequestBody DateDTO day){
+        return dService.getDate(day);
+    }
 
     @GetMapping("/{id}")
     public DateEntity getDate(@PathVariable("id") String id){

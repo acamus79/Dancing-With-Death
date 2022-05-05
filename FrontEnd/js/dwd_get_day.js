@@ -2,8 +2,7 @@ var day = null;
 
 //const app = document.querySelector("#inputDate");
 const url = 'http://localhost:8080/dwd/date/';
-//const btnDay = document.querySelector("#btn-day");
-//btnDay.onclick = getDay; 
+
 
 $(document).ready(function(){
     
@@ -31,7 +30,7 @@ $(document).ready(function(){
             data.forEach(api => {
                 //var y = new Date().getFullYear();//para obtener el año actual
                 var table = document.getElementById('miTabla')//genero un elemento html segun su Id
-                
+
 
                     for (var i = 0; i < data.length; i++)
                     {

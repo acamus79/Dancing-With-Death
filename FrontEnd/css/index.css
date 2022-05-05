@@ -13,7 +13,6 @@
 }
   
 body {
-	font-family: 'Nunito Sans', sans-serif;
 	margin: 0;
 	margin-bottom: 40px;
 	clear: left;
@@ -21,7 +20,7 @@ body {
 }
 
 header{
-	background-color: #04324c;
+	background-color: #181e22;
 	height: 3em;
 	color: #FFF;
 	padding: 4px;
@@ -36,26 +35,14 @@ header a{
 	margin-left: 1em;
 }
 
-  body {
-    font-size:60.5%;
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
-	margin-bottom: 40px;
-    transition: 0.7s all;
-  }
-  .content {
-    max-width: 960px;
-    margin:0 auto;
-    font-size:2.5em;
-  }
-  
-  a{
+a{
     color: aliceblue;
     text-align: justify;
     margin: auto 1em auto;
     text-decoration: none;
   }
-  a:hover{
+
+a:hover{
     color: rgb(86, 134, 176);
   }
 
@@ -88,38 +75,19 @@ header a{
     text-align: center;
   }
   
-  #principal,
-  aside {
-    border-radius: .5em;
+  .principal{
+    /* IMPORTANTE */
+    text-align: center;
+  }
+
+  .secundario{
+    padding: 10px;
+    margin: 10px;
+    /* IMPORTANTE */
     display: inline-block;
-    margin: 0 auto;
-    min-height: 300px;
-    padding: .25em 0;
-    vertical-align: top;
-    width: 100%;
   }
 
-  aside {
-    margin-top:0.5em;
-  }
-
-#tabla{
-    font-size: 100%;
-	padding: 10px;
-	width: 95%;
-	height: 25em;
-	margin: auto;
-	border-radius: 10px;
-	resize:none;
-	border: none;
-}
-
-::placeholder {
-	text-align: center;
-	font-size: 1.2em;
-	font-style: italic;
-}
-
+  
 #textoEncriptado{
     font-size: 100%;
 	background-image: url(/assets/img/encriptar2.png);

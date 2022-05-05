@@ -91,52 +91,7 @@ a:hover{
   }
 
   
-#textoEncriptado{
-    font-size: 100%;
-	background-image: url(/assets/img/encriptar2.png);
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
-	object-fit: fill;
-	padding: 10px;
-	width: 95%;
-	height: 25em;
-	margin: auto;
-	border-radius: 10px;
-	resize:none;
-	border: none;
-}
 
-.btn{
-	margin-top: 2em;
-	margin-right: 2em;
-	width: 8em;
-	height: 3em;
-	border-radius: 15px;
-	cursor: pointer;
-	font-weight: bold;
-	text-transform: capitalize;
-	background: #FFF;
-	transition: 0.7s all;
-	border-color: #135074;
-}
-
-.btn:hover{
-	background: rgb(86, 134, 176);
-	transform: scale(1.20);
-	color: aliceblue;
-}
-
-#btn-encriptar{
-	border-color: #c3d6e1;
-	background-color: #233657;
-	color: white;
-}
-#btn-encriptar:hover{
-	border-color: #233657;
-	background-color: #c3d6e1;
-	color: black;
-}
   
   /* MEDIA QUERY */
   @media  screen and (min-width:480px){

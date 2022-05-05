@@ -74,6 +74,20 @@ public class DateServiceImpl implements DateService{
         }
         return op.get();
     }
+    
+    @Override
+    public List<DateDTO> getDate(DateDTO day) {
+        
+        List<DateEntity> schedule = dRepo.findAll();
+        List<DateEntity> thisDay = new ArrayList();
+        
+        for (DateEntity dateEntity : schedule) {
+            if(dMapper.localDate2String(dateEntity.getDancingDate()).equals(day.getDancingDate())){
+                thisDay.add(dateEntity);
+            }
+        }
+        return dMapper.entityList2DtoList(thisDay);
+    }
         
     private DateDTO verifyDTO(DateDTO dto){
         LocalTime moment = dMapper.string2LocalTime(dto.getDancingTime());
@@ -132,4 +146,6 @@ public class DateServiceImpl implements DateService{
         dto.setName("");
         return dto;
     }
+
+    
 }

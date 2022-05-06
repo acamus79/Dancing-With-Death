@@ -13,7 +13,7 @@
 }
   
 body {
-  background-image: url(/FrontEnd/assets/img/bg_dwd.svg);
+  background-image: url(/assets/img/bg_dwd.svg);
   background-size: cover;
   background-repeat: no-repeat;
 	margin: 0;

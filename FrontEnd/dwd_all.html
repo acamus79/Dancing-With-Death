@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWD</title>
+    <link rel="icon" type="image/x-icon" href="assets/encriptapp.ico"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- FileSaver -->
+    <script src="https://unpkg.com/xlsx@0.16.9/dist/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+</head>
+<body class="row justify-content-center align-items-center vh-100">
+    <div class="container p-4 bg-white text-center">
+        <h3>Dancing With Death</h3>
+    </div>
+    <section id="principal">
+        <div class="container p-2">
+            <table class="table table-bordered" id="tabla">
+                <button id="btnExportar" class="btn-success p-2 m-1">
+                    <i class="fas fa-file-excel"> </i> Export 
+                </button>
+                <tr  class="bg-dark text-white text-center">
+                    <th>Nro</th>
+                    <th>Nombre</th>  
+                    <th>E-Mail</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+                <tbody id="miTabla"></tbody>
+            </table>
+        </div>
+    </section>
+    </body>
+    <footer class="footer">
+        <a class="footer-group" href="../dwd_date.html" target="_blank">Home</a>
+        <a class="footer-group" href="../dwd_all.html" target="_blank">View all Dates</a>
+        <a class="footer-group" href="https://github.com/acamus79" target="_blank">About</a>
+    </footer>
+</html>
+<!-- script export to excel -->
+<script src="js/export_excel.js"></script>
+<!-- script get all date -->
+<script src="js/dwd_get_all.js"></script>

@@ -18,8 +18,7 @@ $(document).ready(function(){
         .then(res => res.json())
         .then(data => {
             data.forEach(api => {
-                
-                var table = document.getElementById('miTabla')//genero un elemento html segun su Id
+                var table = document.getElementById('miTabla')//element html by iD
                     for (var i = 0; i < data.length; i++)
                     {
                         var fila = 

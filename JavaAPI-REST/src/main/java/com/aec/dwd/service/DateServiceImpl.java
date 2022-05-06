@@ -34,7 +34,6 @@ public class DateServiceImpl implements DateService{
             return dMapper.entity2DTO(entity);
         }
         return dtoResult;    
-  
     }
 
     @Override
@@ -45,8 +44,8 @@ public class DateServiceImpl implements DateService{
     }
 
     @Override
-    public DateDTO update(String id, DateDTO dto) {
-        DateEntity date = this.findById(id);
+    public DateDTO update(DateDTO dto) {
+        DateEntity date = this.findById(dto.getId());
         date.setEmail(dto.getEmail());
         date.setName(dto.getName());
         dRepo.save(date);
@@ -62,19 +61,7 @@ public class DateServiceImpl implements DateService{
     public DateDTO getDetails(String id) {
         return dMapper.entity2DTO(this.findById(id));
     }
- 
-    //****************************//**********************
-    private DateEntity findById(String id) {
-        Optional<DateEntity> op = dRepo.findById(id);
         
-        if (!op.isPresent()){
-            throw new ParamNotFound("No Date for id: " + id);
-        }else if(!op.get().isActive()){
-            throw new ParamNotFound("No Date active for id: " + id);
-        }
-        return op.get();
-    }
-    
     @Override
     public List<DateDTO> getDate(DateDTO day) {
         
@@ -88,7 +75,32 @@ public class DateServiceImpl implements DateService{
         }
         return dMapper.entityList2DtoList(thisDay);
     }
+    
+    //**********************/ METODOS PRIVADOS /**********************
+    
+    /**
+     * Recibe un String y devuelve una Entidad si existe
+     * @param id
+     * @return DateEntity
+     */
+    private DateEntity findById(String id) {
+        Optional<DateEntity> op = dRepo.findById(id);
         
+        if (!op.isPresent()){
+            throw new ParamNotFound("No Date for id: " + id);
+        }else if(!op.get().isActive()){
+            throw new ParamNotFound("No Date active for id: " + id);
+        }
+        return op.get();
+    }
+    
+    /**
+     * Verificacion de Horario de 9:00 a 17:00 hs.
+     * Verificacion de dias de la semana
+     * Verificacion de Email no repetido en el dia.
+     * @param dto
+     * @return 
+     */
     private DateDTO verifyDTO(DateDTO dto){
         LocalTime moment = dMapper.string2LocalTime(dto.getDancingTime());
         LocalDate dateDay = dMapper.string2LocalDate(dto.getDancingDate());
@@ -138,6 +150,11 @@ public class DateServiceImpl implements DateService{
         return dto;
     }
     
+    /**
+     * Limpia un DTO para retornarlo a la verificacion
+     * @param dto
+     * @return 
+     */
     private DateDTO blank (DateDTO dto){
         dto.setDancingDate("");
         dto.setDancingTime("");

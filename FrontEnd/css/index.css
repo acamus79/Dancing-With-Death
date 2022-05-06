@@ -7,20 +7,22 @@
     padding:0;
   }
 
-  html {
+html {
 	min-height: 100%;
 	position: relative;
+
 }
   
 body {
-  background-image: url(/assets/img/bg_dwd.svg);
+  background-image: url(/FrontEnd/assets/img/dwd_bg_lr.svg);
   background-size: cover;
-  background-repeat: no-repeat;
-	margin: 0;
+	background-repeat: no-repeat;
+  margin: 0;
 	margin-bottom: 4em;
 	clear: left;
 	clear: right;
 }
+
 
 header{
 	background-color: #181e22;
@@ -30,7 +32,7 @@ header{
 	align-items: center;
 }
 
-header a{
+header{
 	padding: 4px;
 	font-size: 2em;
 	display:inline-block;
@@ -38,29 +40,35 @@ header a{
 	margin-left: 1em;
 }
 
-a{
-    color: aliceblue;
-    text-align: justify;
-    margin: auto 1em auto;
-    text-decoration: none;
-  }
-
-a:hover{
-    color: rgb(86, 134, 176);
-  }
-
   header, 
   nav,
   footer {
-    background-color: #04324c;
+    text-align: center;
     border-radius: .5em;
     margin: 0.5em auto;
     padding: 0.25em;
-    text-align: center;
+    padding-top: 1em;
   }
 
-  footer{
+  .footer{
     margin-top: 2em;
+    text-align: center;
+    background-color: #1e1e1f;
+    mix-blend-mode: multiply;
+  }
+
+  .footer-group{
+    color: darkgrey;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    transition: 0.8;
+  }
+
+  .footer-group:hover{
+    color: aliceblue;
+    scale: 1.2;
   }
 
   #ic{
@@ -81,6 +89,7 @@ a:hover{
   .principal{
     /* IMPORTANTE */
     text-align: center;
+    mix-blend-mode: multiply;
   }
 
   .secundario{
@@ -89,9 +98,6 @@ a:hover{
     /* IMPORTANTE */
     display: inline-block;
   }
-
-  
-
   
   /* MEDIA QUERY */
   @media  screen and (min-width:480px){

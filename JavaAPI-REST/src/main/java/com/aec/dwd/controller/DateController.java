@@ -1,9 +1,3 @@
-/*
- * Sin licencia.
- * Uso para capacitación
- * 2021 Año de la Prevención y Lucha contra el COVID-19.
- */
-
 package com.aec.dwd.controller;
 
 import com.aec.dwd.model.DateEntity;
@@ -27,8 +21,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 
- * @author Adrian E. Camus
+ * @author Adrian E. Camus <https://acamus79.github.io/>
  */
 @RestController
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
@@ -41,12 +34,20 @@ public class DateController {
     @Autowired
     DateRepository dRepo;
     
+    /**
+     * 
+     * @return DateDTO
+     */
     @ResponseStatus(HttpStatus.ACCEPTED)
     @GetMapping("/all")
     public List<DateDTO> getAllDate(){
         return dService.getAll();
     }
-    
+    /**
+     * 
+     * @param day
+     * @return List 
+     */
     @ResponseStatus(HttpStatus.ACCEPTED)
     @PostMapping("/date")
     public List<DateDTO> getDay(@RequestBody DateDTO day){
@@ -79,7 +80,7 @@ public class DateController {
     
     @PutMapping("/update")
     public ResponseEntity<DateDTO> updateDate(@RequestBody DateDTO dto){
-        DateDTO editedDate = dService.update(dto.getId(), dto);
+        DateDTO editedDate = dService.update(dto);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(editedDate);
     }
     

@@ -6,7 +6,7 @@ const url = 'http://localhost:8080/dwd/all';
     .then(data => {
         data.forEach(api => {
             //var y = new Date().getFullYear();//para obtener el año actual
-            var table = document.getElementById('miTabla')//genero un elemento html segun su Id
+            var table = document.getElementById('miTabla')//element html by iD
                 for (var i = 0; i < data.length; i++)
                 {
                     var fila = 

@@ -44,7 +44,8 @@ public class DateMapper {
     }
      
     /**
-     *
+     * De cadena de caracteres a Objeto LocalDate
+     * Formato dd/MM/yyyy
      * @param dateString
      * @return LocalDate
      */
@@ -55,7 +56,7 @@ public class DateMapper {
     }
 
     /**
-     *
+     * De objeto LocalDate a cadena de caracteres
      * @param date
      * @return String
      */
@@ -63,12 +64,22 @@ public class DateMapper {
         String stringDate = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         return stringDate;
     }
-
+    
+    /**
+     * De cadena de caracteres a objeto LocalTime
+     * Formato HH:mm
+     * @param timeString
+     * @return 
+     */
     public LocalTime string2LocalTime(String timeString){
         DateTimeFormatter dtm = DateTimeFormatter.ofPattern("HH:mm");
         return LocalTime.parse(timeString, dtm);
     }
-    
+    /**
+     * De objeto LocalTime a cadena de caracteres
+     * @param time
+     * @return 
+     */
     public String localTime2String(LocalTime time){
         String stringTime = time.format(DateTimeFormatter.ofPattern("HH:mm"));
         return stringTime;

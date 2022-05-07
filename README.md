@@ -46,7 +46,7 @@ I use [jquery.qrcode.js](https://github.com/jeromeetienne/jquery-qrcode) a jquer
 
 Also use [TableExport.js](https://github.com/clarketm/TableExport) to export the data table.
 
-The CSS is mostly the [Bootswatch](https://bootswatch.com/) LUX theme, with personal modifications, I think a little more work needs to be done on responsiveness
+The CSS is mostly the [Bootswatch](https://github.com/thomaspark/bootswatch/) LUX theme, with personal modifications, I think a little more work needs to be done on responsiveness
 
 The background image is my own design.
 

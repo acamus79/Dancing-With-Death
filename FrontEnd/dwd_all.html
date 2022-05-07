@@ -7,7 +7,7 @@
     <title>DWD</title>
     <link rel="icon" type="image/x-icon" href="assets/encriptapp.ico"/>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/dwd.css"/>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Bootswatch -->
@@ -19,11 +19,11 @@
     <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
     <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
 </head>
-<body class="row justify-content-center align-items-center vh-100">
+<body class="row justify-content-center align-items-center vh-100" id="bg">
     <div class="container p-4 bg-white text-center">
         <h3>Dancing With Death</h3>
     </div>
-    <section id="principal">
+    <section class="secundario">
         <div class="container p-2">
             <table class="table table-bordered" id="tabla">
                 <button id="btnExportar" class="btn-success p-2 m-1">
@@ -42,9 +42,9 @@
     </section>
     </body>
     <footer class="footer">
-        <a class="footer-group" href="../dwd_date.html" target="_blank">Home</a>
+        <a class="footer-group" href="../dwd_index.html" target="_blank">Home</a>
         <a class="footer-group" href="../dwd_all.html" target="_blank">View all Dates</a>
-        <a class="footer-group" href="https://github.com/acamus79" target="_blank">About</a>
+        <a class="footer-group" href="../dwd_about.html" target="_blank">About</a>
     </footer>
 </html>
 <!-- script export to excel -->

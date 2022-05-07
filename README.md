@@ -31,6 +31,8 @@ A REST API for programming dance with death quotes The API has to be implemented
 - Death is very demanding with its schedule, so each the appointment must contain date, start time and contact of information (such as email).
 - You can only date with Death for 1 hour, more would be useless. less would be too much traumatic.
 
+To develop this API I have used Java 11 with Maven and Spring Boot 2.6.5; PostgreSQL 14, although it was also tested on MySQL.
+
 > FrontEnd: 
  
 A web client for the API you just created, 
@@ -40,8 +42,18 @@ A web client for the API you just created,
 - When you create an appointment, you get a unique code to be able to edit that appointment, in QR code format
 - Death needs to see all the appointments and since he likes to handle the data he also wants to export it to excel
 
+I use [jquery.qrcode.js](https://github.com/jeromeetienne/jquery-qrcode) a jquery plugin for a pure browser qrcode generation.
 
+Also use [TableExport.js](https://github.com/clarketm/TableExport) to export the data table.
+
+The CSS is mostly the [Bootswatch](https://bootswatch.com/) LUX theme, with personal modifications, I think a little more work needs to be done on responsiveness
+
+The background image is my own design.
 
 ##
 
-[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://github.com/acamus79)
+If you misread or don't understand me, don't blame me it was [GoogleTranslator](https://translate.google.com.ar/)
+
+##
+
+[![](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://github.com/acamus79)

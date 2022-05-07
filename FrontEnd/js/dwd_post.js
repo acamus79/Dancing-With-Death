@@ -21,7 +21,7 @@ myForm.addEventListener('submit', function (e){
             var qr = document.getElementById('qrcode');
             if(!data.id == ''){
                 qrCreate();
-                jQuery('#qrcode').qrcode("http://127.0.0.1:5500/dwd_date.html?"+data.id);
+                jQuery('#qrcode').qrcode("http://localhost:8080/dwd/?"+data.id);
                 /*jQuery('#qrcode').qrcode({
                     width: 124, 
                     height: 124,

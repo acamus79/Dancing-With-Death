@@ -28,7 +28,7 @@ myForm.addEventListener('submit', function (e){
                     text: "Your appointment has been registered, iD: "+data.id
                 });*/
                 document.getElementById('msg').innerHTML = "<h5 style='color:darkgreen;'>you have a date with death</h5>";
-                document.getElementById('msg2').innerHTML = "<input type='button' value='Reload' onclick='location.reload()' class='btn-outline-success p-1'></input>";
+                document.getElementById('msg2').innerHTML = "<input type='button' value='New Date' onclick='location.reload()' class='btn-outline-success p-1'></input>";
                 $("#myForm>").empty() //empty
             }else if(!data.dancingTime == ''){
                 error();

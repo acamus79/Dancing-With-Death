@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Adrian E. Camus <https://acamus79.github.io/>
  */
 @RestController
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT})
 @RequestMapping("/dwd")
 public class DateController {
     

@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Query;
  */
 public interface DateRepository extends JpaRepository<DateEntity, String>{
     
-    @Query("SELECT c FROM DateEntity c WHERE c.active = true")
+    @Query("SELECT c FROM DateEntity c WHERE c.active = true order by c.dancingDate, c.dancingDate desc")
     public List<DateEntity> searchActive();
     
 }

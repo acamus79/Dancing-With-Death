@@ -7,7 +7,7 @@
     <title>DWD</title>
     <link rel="icon" type="image/x-icon" href="assets/dwd-reaper_38285.ico"/>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/dwd.css">
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- bootswatch -->
@@ -21,67 +21,36 @@
     <!-- jquery.qrcode.js -->
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
 </head>
-<body>
-    <div class="row justify-content-center align-items-center vh-100" id="bg">
+<body id="bg">
+    <div class="row justify-content-center align-items-center vh-100">
         <div class="container p-4 bg-white text-center">
             <h3>Dancing With Death</h3>
         </div>
-        <section class="principal">
+        <section class="principal" >
             <div class="secundario">
-                <label for="inputDate" class="form-label mt-4">Appointment date</label>
-                <input type="date" class="form-control" id="fecha" name="inputDate" aria-describedby="dateHelp">
-                <small id="dateHelp" class="form-text text-muted">When you wish to dance with death</small>
-                <table class="table table-bordered">
-                <tr  class="bg-dark text-white text-center id="tabla"">
-                    <th>Nro</th>
-                    <th>Nombre</th>  
-                    <th>E-Mail</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                </tr>
-                </table>
-                <table class="table table-bordered" id="tb">
-                    <tbody id="miTabla"></tbody>
-                </table>        
-            </div>
-            <div class="secundario">
-                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                    <div class="card-header">Planning dates to dance</div>
+                <div class="card text-white bg-primary mb-3" style="max-width: 40rem;">
+                    <div class="card-header">ID: <span id="msg"></span></div>
                     <div class="card-body">
-                        <h5 class="card-title" id="msg">Make a date with Death</h5>
-                        <p class="card-text" id="msg2">Death is very picky about your schedule.</p>
-                        <div class="qrcode" id="qrcode"></div>
+                        <h5 class="card-title">Honey, we have a dance date, and it's a commitment that I take very seriously</h5>
+                        <p class="card-text">However, I will allow you to correct this:</p>
+                        <div id="date">
+                            <p>Name: <span id="msg2"></span></p>
+                            <p>Email: <span id="msg3"></span></p>
+                        </div>
                         <div class="wrapper">
                             <form class="form" id="myForm">
                                 <div class="form-group">
-                                    <label for="inputName" class="form-label mt-2">Name</label>
-                                    <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter your name" required>
-                                    <small id="nameHelp" class="form-text text-muted">What do you want Death to call you?</small>
+                                    <label for="inputName" class="form-label mt-2">New Name</label>
+                                    <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="What do you want me to call you?" required>
+                                    <small id="nameHelp" class="form-text text-muted">Please don't lie to death</small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail" class="form-label mt-2">Email address</label>
-                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
-                                    <small id="emailHelp" class="form-text text-muted">Death will never share your email with anyone else.</small>
+                                    <label for="inputEmail" class="form-label mt-2">New Email</label>
+                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Your email" required>
+                                    <small id="emailHelp" class="form-text text-muted">Just to keep in touch.</small>
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputDate" class="form-label mt-2">Appointment date</label>
-                                    <input type="date" class="form-control" id="inputDate" aria-describedby="dateHelp" required>
-                                    <small id="dateHelp" class="form-text text-muted">When you wish to dance with death</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="selectTime" class="form-label mt-2">Dance Time</label>
-                                    <select class="form-select" id="selectTime" required>
-                                        <option>09:00</option>
-                                        <option>10:00</option>
-                                        <option>11:00</option>
-                                        <option>12:00</option>
-                                        <option>13:00</option>
-                                        <option>14:00</option>
-                                        <option>15:00</option>
-                                        <option>16:00</option>
-                                        <option>17:00</option>
-                                    </select>
-                                </div>
+                                
+                                
                                 <div class="form-group mt-4">
                                     <input type="submit" class="btn btn-warning" value="submit" id="dwdBtn"></input>
                                 </div>
@@ -94,15 +63,14 @@
     </div>
 </body>
 <footer class="footer">
-    <a class="footer-group" href="../dwd_date.html" target="_blank">Home</a>
+    <a class="footer-group" href="../dwd_index.html" target="_blank">Home</a>
     <a class="footer-group" href="../dwd_all.html" target="_blank">View all Dates</a>
-    <a class="footer-group" href="https://github.com/acamus79" target="_blank">About</a>
+    <a class="footer-group" href="../dwd_about.html" target="_blank">About</a>
 </footer>
 </html>
 
 <!-- script para conectar a la API recorrer el JSON y transformarlo en una Tabla HTML -->
 
-<script src="js/dwd_get_day.js"></script>
-<script src="js/dwd_post.js"></script>
+<script src="js/dwd_update.js"></script>
 
 

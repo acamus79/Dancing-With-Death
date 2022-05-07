@@ -17,6 +17,20 @@ body {
   margin-bottom: 0%;
 	clear: left;
 	clear: right;
+  
+}
+
+main{
+  margin: 1.5em;
+  padding: 1em 1em 3em 1em;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+#bgDWD{
+  mix-blend-mode: multiply;
 }
 
 #bg{
@@ -25,6 +39,7 @@ body {
   background-position: 0% -40%;
   background-size: cover;
   background-attachment: scroll;
+  
 }
 
 #date{
@@ -39,6 +54,7 @@ body {
 .principal{
     /* IMPORTANTE */
     text-align: center;
+    
     
   }
 
@@ -81,13 +97,3 @@ body {
   color: whitesmoke;
   scale: 1.2;
 }
-
-  /* MEDIA QUERY */
-  @media  screen and (min-width:420px){
-    header a {
-      font-size: 2em;
-    }
-    footer{
-      margin-top: 1em;
-    }
-  }

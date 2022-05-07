@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWD</title>
+    <link rel="icon" type="image/x-icon" href="assets/dwd-reaper_38285.ico"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/dwd.css">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- tableexport -->
+    <script src="https://unpkg.com/xlsx@0.16.9/dist/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+    <!-- jquery.qrcode.js -->
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+</head>
+<body id="bg">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="container p-4 bg-white text-center">
+            <h3>Dancing With Death</h3>
+        </div>
+        <section class="principal" >
+            <div class="secundario">
+                <label for="inputDate" class="form-label mt-4">Appointment date</label>
+                <input type="date" class="form-control" id="fecha" name="inputDate" aria-describedby="dateHelp">
+                <small id="dateHelp" class="form-text text-muted">Select a date to review confirmed appointments</small>
+                <table class="table table-bordered" id="tbDate">
+                <tr  class="bg-dark text-white text-center" id="tabla">
+                    <th>Nro</th>
+                    <th>Nombre</th>  
+                    <th>E-Mail</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+                </table>
+                <table class="table table-bordered" id="tb">
+                    <tbody id="miTabla"></tbody>
+                </table>        
+            </div>
+            <div class="secundario">
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Planning dates to dance</div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="msg">Make a date with Death</h5>
+                        <p class="card-text" id="msg2">Death is very picky about your schedule.</p>
+                        <div class="qrcode" id="qrcode"></div>
+                        <div class="wrapper">
+                            <form class="form" id="myForm">
+                                <div class="form-group">
+                                    <label for="inputName" class="form-label mt-2">Name</label>
+                                    <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter your name" required>
+                                    <small id="nameHelp" class="form-text text-muted">What do you want Death to call you?</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="form-label mt-2">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                    <small id="emailHelp" class="form-text text-muted">Death will never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputDate" class="form-label mt-2">Appointment date</label>
+                                    <input type="date" class="form-control" id="inputDate" aria-describedby="dateHelp" required>
+                                    <small id="dateHelp" class="form-text text-muted">When you wish to dance with death</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selectTime" class="form-label mt-2">Dance Time</label>
+                                    <select class="form-select" id="selectTime" required>
+                                        <option>09:00</option>
+                                        <option>10:00</option>
+                                        <option>11:00</option>
+                                        <option>12:00</option>
+                                        <option>13:00</option>
+                                        <option>14:00</option>
+                                        <option>15:00</option>
+                                        <option>16:00</option>
+                                        <option>17:00</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input type="submit" class="btn btn-warning" value="submit" id="dwdBtn"></input>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+    </div>
+</body>
+<footer class="footer">
+    <a class="footer-group" href="../dwd_index.html" target="_blank">Home</a>
+    <a class="footer-group" href="../dwd_all.html" target="_blank">View all Dates</a>
+    <a class="footer-group" href="../dwd_about.html" target="_blank">About</a>
+</footer>
+</html>
+
+<!-- script para conectar a la API recorrer el JSON y transformarlo en una Tabla HTML -->
+
+<script src="js/dwd_get_day.js"></script>
+<script src="js/dwd_post.js"></script>
+
+

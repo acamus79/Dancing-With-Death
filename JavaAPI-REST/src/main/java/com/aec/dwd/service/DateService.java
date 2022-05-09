@@ -4,51 +4,49 @@ import com.aec.dwd.model.DateDTO;
 import java.util.List;
 
 /**
- * @author Adrian E. Camus <https://acamus79.github.io/>
+ * @author Adrian E. Camus
  */
 public interface DateService {
     
     /**
-     * Recibe un objeto DTO y crea una entidad
-     * Retorna la entidad persistida
+     * Receives a DTO object and creates an entity persists it and returns it
      * @param dto
      * @return DateDTO
      */
     public DateDTO save(DateDTO dto);
     
     /**
-     * Retorna una lista de DTO con todos los registros
-     * @return List<DateDTO>
+     * Returns a list of DTOs with all records
+     * @return List(DateDTO)
      */
     public List<DateDTO> getAll();
     
     /**
-     * Recibe un objeto DTO y cambia un registro con los valores de ese objeto
+     * Receive a DTO object and change a record with the values ​​of that object
      * @param dto
      * @return DateDTO
      */
     public DateDTO update(DateDTO dto);
     
     /**
-     * Recibe un String iD 
-     * Desactiva el registro en la BD y persiste
+     * Receive a String ID, set the active field in the DB to false and persist
      * @param id 
      */
     public void delete(String id);
     
     /**
-     * recibe un String iD 
-     * devuelve el objeto con ese iD
+     * Receives a String ID, looks up that value in the DB and returns a data 
+     * transfer object corresponding to that entity.
      * @param id
      * @return DateDTO
      */
     public DateDTO getDetails(String id);
     
     /**
-     * recibe un objeto DTO con un parametro dia 
-     * devuelve una lista de objetos que contengan el dia
+     * Receives a dto with a parameter day, and returns a list of transfer 
+     * objects that have that day as a parameter.
      * @param day
-     * @return List<DateDTO>
+     * @return List(DateDTO)
      */
     public List<DateDTO> getDate(DateDTO day);
 

@@ -1,12 +1,11 @@
 var day = null;
-const url = 'http://localhost:8080/dwd/date/';
+const url = 'https://aec-dwd.herokuapp.com/dwd/date';
 
 $(document).ready(function(){
     $('#fecha').change(function(){
         $("#tb> tbody"). empty() //empty table
         var f = $('#fecha').val();
         day = f[8]+f[9]+"/"+f[5]+f[6]+"/"+f[0]+f[1]+f[2]+f[3];//format dd/mm/yyyy
-        //alert(day);
         fetch(url,{
             headers: {
                 'Accept': 'application/json, text/plain, */*',

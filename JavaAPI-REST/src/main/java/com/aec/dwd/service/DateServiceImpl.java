@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author Adrian E. Camus <https://acamus79.github.io/>
+ * @author Adrian E. Camus
  */
 @Service
 public class DateServiceImpl implements DateService{
@@ -76,10 +76,10 @@ public class DateServiceImpl implements DateService{
         return dMapper.entityList2DtoList(thisDay);
     }
     
-    //**********************/ METODOS PRIVADOS /**********************
+    //**********************/ PRIVATED METHOD /**********************
     
     /**
-     * Recibe un String y devuelve una Entidad si existe
+     * Receives a String and returns an Entity if it exists
      * @param id
      * @return DateEntity
      */
@@ -95,9 +95,9 @@ public class DateServiceImpl implements DateService{
     }
     
     /**
-     * Verificacion de Horario de 9:00 a 17:00 hs.
-     * Verificacion de dias de la semana
-     * Verificacion de Email no repetido en el dia.
+     * Verification of Hours from 9:00 a.m. to 5:00 p.m.
+     * Verification of days of the week
+     * Email verification not repeated in the day.
      * @param dto
      * @return 
      */
@@ -151,7 +151,7 @@ public class DateServiceImpl implements DateService{
     }
     
     /**
-     * Limpia un DTO para retornarlo a la verificacion
+     * Clear a DTO to return it to verification
      * @param dto
      * @return 
      */

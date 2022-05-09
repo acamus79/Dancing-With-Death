@@ -17,7 +17,7 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 /**
- * @author Adrian E. Camus <https://acamus79.github.io/>
+ * @author Adrian E. Camus
  */
 @Entity
 @Table(name = "date")
@@ -28,13 +28,18 @@ import org.hibernate.annotations.Where;
 @Where(clause = "active = true")
 public class DateEntity implements Serializable {
     
+    private static final long serialVersionUID = 8478674716638L;
+    
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(length = 36)
     private String id;
 
-    //como para hacer un falso borrado en la BD, por defecto se crea en true(1) y con la anotacion SQLDelete lo cambiamos a false(0)
+    /**
+     * How to make a false delete in the DB, by default it is created in 
+     * true(1) and with the SQLDelete annotation we change it to false(0)
+     */
     private boolean active = Boolean.TRUE;
     
     @Column(name = "dancing_date", nullable = false)

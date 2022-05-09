@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.aec</groupId>
 	<artifactId>dwd</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.8-SNAPSHOT</version>
 	<name>Dancing with Death</name>
-	<description>Dancing with death for Spring Boot</description>
+	<description>It is a rest api, developed for educational purposes, to practice methodologies, the use of dates and times and persist records in a database</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

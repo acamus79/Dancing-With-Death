@@ -1,5 +1,5 @@
 const myForm = document.getElementById('myForm');
-const urlPost = 'http://localhost:8080/dwd/new';
+const urlPost = 'https://aec-dwd.herokuapp.com/dwd/new';
 
 myForm.addEventListener('submit', function (e){
     e.preventDefault();
@@ -21,7 +21,7 @@ myForm.addEventListener('submit', function (e){
             var qr = document.getElementById('qrcode');
             if(!data.id == ''){
                 qrCreate();
-                jQuery('#qrcode').qrcode("http://localhost:8080/dwd/?"+data.id);
+                jQuery('#qrcode').qrcode("https://acamus79.github.io/dwd/dwd_date?"+data.id);
                 /*jQuery('#qrcode').qrcode({
                     width: 124, 
                     height: 124,

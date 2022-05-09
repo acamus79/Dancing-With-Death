@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.aec.dwd"},{"l":"com.aec.dwd.controller"},{"l":"com.aec.dwd.exception"},{"l":"com.aec.dwd.model"},{"l":"com.aec.dwd.repositories"},{"l":"com.aec.dwd.service"}]

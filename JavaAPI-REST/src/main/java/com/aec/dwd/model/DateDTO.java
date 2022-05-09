@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author Adrian E. Camus <https://acamus79.github.io/>
+ * @author Adrian E. Camus
  */
 @Data
 @NoArgsConstructor

@@ -3,97 +3,84 @@
 */
 
 * {
-    margin:0;
-    padding:0;
-  }
+  margin:0;
+  padding:0;
+}
 
 html {
-	min-height: 100%;
-	position: relative;
+min-height: 100%;
+position: relative;
 }
-  
+
 body {
-  margin: 0;
-  margin-bottom: 0%;
-	clear: left;
-	clear: right;
-  
+margin: 0;
+margin-bottom: 0%;
+clear: left;
+clear: right;
 }
 
 main{
-  margin: 1.5em;
-  padding: 1em 1em 3em 1em;
-  display: grid;
-  gap: 1rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+margin: 1.5em;
+padding: 1em 1em 3em 1em;
+display: grid;
+gap: 1rem;
+grid-auto-rows: 22rem;
+grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 
 #bgDWD{
-  mix-blend-mode: multiply;
+mix-blend-mode: multiply;
 }
 
 #bg{
-  background-image:url(/assets/img/dwd_bg_lr.svg);
-  background-repeat: no-repeat;
-  background-position: 0% -40%;
-  background-size: cover;
-  background-attachment: scroll;
-  
+background-image:url(/assets/img/dwd_bg_lr.svg);
+background-repeat: no-repeat;
+background-position: 0% -40%;
+background-size: cover;
+background-attachment: scroll;
+}
+
+.dwdOver{
+  width: 100%;
+  display: flex;
+  overflow: auto;
 }
 
 #date{
-  text-align: justify;
-  display: inline-block;
+text-align: justify;
+display: inline-block;
 }
 
-#tbDate{
-  mix-blend-mode: multiply;
+.tbDate{
+mix-blend-mode: multiply;
+display: flex;
 }
 
 .principal{
-    /* IMPORTANTE */
-    text-align: center;
-    
-    
-  }
+  /* IMPORTANTE */
+  text-align: center;
+}
 
 .secundario{
-  padding: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0%;
-  margin-bottom: 4em;
-  /* IMPORTANTE */
-  display: inline-block;
+padding: 1em;
+margin-left: 1em;
+margin-right: 1em;
+margin-top: 0%;
+margin-bottom: 4em;
+/* IMPORTANTE */
+display: inline-block;
 }
 
-  footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 4em;
-    background-color: #1e1e1f;
-    mix-blend-mode: multiply;
-    padding-top: 5em;
-  }
-  
-.footer{
-  text-align: center;
-  margin-top: 2em;
-  padding-top: 1em;
-}
-  
 .footer-group{
-  color: darkgrey;
-  text-decoration: none;
-  display: inline-block;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  transition: 0.8;
+color: darkgrey;
+text-decoration: none;
+display: inline-block;
+padding-bottom: 1em;
+padding-left: 2em;
+transition: 0.8;
 }
-  
+
 .footer-group:hover{
-  color: whitesmoke;
-  scale: 1.2;
+color: whitesmoke;
+scale: 1.2;
 }

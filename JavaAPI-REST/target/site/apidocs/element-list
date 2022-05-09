@@ -1,0 +1,6 @@
+com.aec.dwd
+com.aec.dwd.controller
+com.aec.dwd.exception
+com.aec.dwd.model
+com.aec.dwd.repositories
+com.aec.dwd.service

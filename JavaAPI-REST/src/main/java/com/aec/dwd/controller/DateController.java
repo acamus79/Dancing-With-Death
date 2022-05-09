@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author Adrian E. Camus <https://acamus79.github.io/>
+ * @author Adrian E. Camus
  */
 @RestController
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT})
@@ -46,7 +46,7 @@ public class DateController {
     /**
      * 
      * @param day
-     * @return List 
+     * @return List(Entity)
      */
     @ResponseStatus(HttpStatus.ACCEPTED)
     @PostMapping("/date")
@@ -54,11 +54,21 @@ public class DateController {
         return dService.getDate(day);
     }
 
+    /**
+     *
+     * @param id
+     * @return ResponseEntity
+     */
     @GetMapping("/{id}")
     public DateEntity getDate(@PathVariable("id") String id){
         return dRepo.findById(id).orElse(new DateEntity());
     }
 
+    /**
+     *
+     * @param dto
+     * @return ResponseEntity
+     */
     @PostMapping("/new")
     public ResponseEntity<DateDTO> saveDate(@RequestBody DateDTO dto){
         
@@ -72,17 +82,26 @@ public class DateController {
         
     }
     
+    /**
+     *
+     * @param id
+     * @return ResponseEntity
+     */
     @DeleteMapping("/del/{id}")
     public ResponseEntity<Void> deleteById(@PathVariable("id") String id){
         dService.delete(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
     
+    /**
+     *
+     * @param dto
+     * @return ResponseEntity
+     */
     @PutMapping("/update")
     public ResponseEntity<DateDTO> updateDate(@RequestBody DateDTO dto){
         DateDTO editedDate = dService.update(dto);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(editedDate);
     }
-    
     
 }

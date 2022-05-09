@@ -21,37 +21,37 @@
     <!-- jquery.qrcode.js -->
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
 </head>
-<body >
+<body id="bg">
     <div class="row justify-content-center align-items-center">
         <div class="container p-4 bg-white text-center">
             <h3>Dancing With Death</h3>
         </div>
 
-    <main class="row justify-content-center" id="bg">
-        
-        <div class="card border-primary mb-3" style="max-width: 40rem;" id="bgDWD">
+    <main class="row justify-content-center">
+        <div class="card borderless-primary mb-3" style="max-width: 40rem;" id="bgDWD">
             <div class="card-header">Select a date to review confirmed appointments</div>
                 <div class="card-body">
                     <label for="inputDate" class="form-label mt-4">Appointment date</label>
                     <input type="date" class="form-control" id="fecha" name="inputDate" aria-describedby="dateHelp">
                     <hr>
-                    <table class="table table-bordered"  id="tbDate">
-                        <tr  class="table-dark text-center" id="tabla">
-                            <th>Nro</th>
-                            <th>Nombre</th>  
-                            <th>E-Mail</th>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                        </tr>
-                    </table>
-                    <hr>
-                    <table class="table table-bordered" id="tb">
-                        <tbody id="miTabla"></tbody>
-                    </table>
+                    <div class="dwdOver">
+                        <table class="table table-responsive table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nro</th>
+                                    <th>Nombre</th>  
+                                    <th>E-Mail</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody id="miTabla"></tbody>
+                        </table>
+                    </div>
                 </div>
         </div>
 
-        <div class="card border-primary mb-3" style="max-width: 40rem;" id="bgDWD">
+        <div class="card borderless-primary mb-3" style="max-width: 40rem;" id="bgDWD">
             <div class="card-header">Planning dates to dance</div>
             <div class="card-body">
                 <h5 class="card-title" id="msg">Make a date with Death</h5>
@@ -97,15 +97,50 @@
         </div>
     </main>
 </body>
-<footer class="footer">
-    <a class="footer-group" href="../dwd_index.html" target="_blank">Home</a>
-    <a class="footer-group" href="../dwd_all.html" target="_blank">View all Dates</a>
-    <a class="footer-group" href="../dwd_about.html" target="_blank">About</a>
+<footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
+        <div class="row mt-4">
+        <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4 pb-1"> <a class="footer-group" href="https://acamus79.github.io/dwd/dwd_about">About</a></h5>
+                <p>
+                DwD is a web application developed for educational purposes.
+                </p>
+                <div class="mt-2">
+                    <!-- Dribbble -->
+                    <a type="button" class="btn btn-floating btn-sm footer-group" href="https://acamus79.github.io/" target="_blank1"><i class="fab fa-dribbble fa-3x"></i></a>
+                    <!-- Linkedin -->
+                    <a type="button" class="btn btn-floating btn-sm footer-group" href="https://www.linkedin.com/in/acamus79" target="_blank1"><i class="fab fa-linkedin fa-3x"></i></a>
+                    <!-- Github -->
+                    <a type="button" class="btn btn-floating btn-sm footer-group" href="https://github.com/acamus79" target="_blank1"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+            </div>
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 pb-1"><a class="footer-group" href="https://acamus79.github.io/dwd/dwd_all">View All Dates</a></h5>
+            <p>
+                You can see a list of everyone who signed up to dance with death
+            </p>
+        </div>
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4"><a class="footer-group" href="https://acamus79.github.io/dwd/">Home</a></h5>
+            <p>
+            Back to the main page
+            </p>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://acamus79.github.io">acamus79</a>
+    </div>
 </footer>
 </html>
 
-<!-- script para conectar a la API recorrer el JSON y transformarlo en una Tabla HTML -->
-
+<!-- DwD script -->
 <script src="js/dwd_get_day.js"></script>
 <script src="js/dwd_post.js"></script>
 

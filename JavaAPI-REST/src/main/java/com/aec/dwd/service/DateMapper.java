@@ -10,11 +10,18 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Adrian E. Camus <https://acamus79.github.io/>
+ * @author Adrian E. Camus
  */
 @Component
 public class DateMapper {
     
+    /**
+     * Receives a data transfer object, creates an entity that is born active 
+     * autogenerates an ID, and assigns the remaining values ​​that it takes 
+     * from the DTO, returning this entity.
+     * @param dto
+     * @return entity
+     */
     public DateEntity dto2Entity(DateDTO dto) {
         DateEntity date = new DateEntity();
         date.setDancingDate(this.string2LocalDate(dto.getDancingDate()));
@@ -23,7 +30,13 @@ public class DateMapper {
         date.setName(dto.getName());
         return date;
     }
-
+    
+    /**
+     * Receives an entity, creates a data transfer object and fills it with
+     * the entity's attributes and returns this DTO
+     * @param date
+     * @return DTO
+     */
     public DateDTO entity2DTO(DateEntity date) {
         DateDTO dto = new DateDTO();
         dto.setId(date.getId());
@@ -34,6 +47,13 @@ public class DateMapper {
         return dto;
     }
     
+    /**
+     * Receives a list of entities, creates a list of transfer objects which 
+     * it populates by looping through the list of entities 
+     * transforming each into a DTO
+     * @param dateList
+     * @return List(DTO)
+     */
     public List<DateDTO> entityList2DtoList(List<DateEntity> dateList) {
         List<DateDTO> dtos = new ArrayList<>();
         
@@ -44,8 +64,8 @@ public class DateMapper {
     }
      
     /**
-     * De cadena de caracteres a Objeto LocalDate
-     * Formato dd/MM/yyyy
+     * LocalDate to String
+     * Format dd/MM/yyyy
      * @param dateString
      * @return LocalDate
      */
@@ -56,7 +76,7 @@ public class DateMapper {
     }
 
     /**
-     * De objeto LocalDate a cadena de caracteres
+     * String to LocalDate Object, format dd/MM/yyyy
      * @param date
      * @return String
      */
@@ -66,8 +86,7 @@ public class DateMapper {
     }
     
     /**
-     * De cadena de caracteres a objeto LocalTime
-     * Formato HH:mm
+     * String to Local Time Object, Format HH:mm
      * @param timeString
      * @return 
      */
@@ -75,8 +94,9 @@ public class DateMapper {
         DateTimeFormatter dtm = DateTimeFormatter.ofPattern("HH:mm");
         return LocalTime.parse(timeString, dtm);
     }
+    
     /**
-     * De objeto LocalTime a cadena de caracteres
+     * LocalTime to String
      * @param time
      * @return 
      */

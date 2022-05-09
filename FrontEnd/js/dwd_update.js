@@ -1,5 +1,5 @@
-const url = 'http://localhost:8080/dwd/'+window.location.search.replace('?','');
-const urlPut = 'http://localhost:8080/dwd/update';
+const url = 'https://aec-dwd.herokuapp.com/dwd/'+window.location.search.replace('?','');
+const urlPut = 'https://aec-dwd.herokuapp.com/dwd/update';
 const myForm = document.getElementById('myForm');
 
 fetch(url)

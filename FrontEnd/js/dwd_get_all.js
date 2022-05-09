@@ -1,5 +1,5 @@
 const app = document.querySelector('.container');
-const url = 'http://localhost:8080/dwd/all';
+const url = 'https://aec-dwd.herokuapp.com/dwd/all';
     
     fetch(url)
     .then(res => res.json())
@@ -15,7 +15,7 @@ const url = 'http://localhost:8080/dwd/all';
                             <td>${data[i].email}</td>
                             <td>${data[i].dancingDate}</td>
                             <td>${data[i].dancingTime}</td>
-                       </tr>`
+                        </tr>`
                 table.innerHTML += fila
                 }
             app.appendChild(api)

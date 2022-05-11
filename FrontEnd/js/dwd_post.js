@@ -54,4 +54,5 @@ function qrCreate(){
 function error(){
     document.getElementById("qrcode").style.backgroundColor = "indianred";
     document.getElementById("qrcode").style.borderRadius = "15px";
+    document.getElementById("qrcode").style.textAlign = "center";
 }

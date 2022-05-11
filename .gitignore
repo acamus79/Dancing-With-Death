@@ -308,3 +308,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+JavaAPI-REST/target/classes/.netbeans_automatic_build
+JavaAPI-REST/target/classes/.netbeans_automatic_build

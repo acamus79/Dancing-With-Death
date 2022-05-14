@@ -4,7 +4,7 @@
 
 ##
 
-DwD is a web application developed for educational purposes, it was developed in JAVA 11 with Spring Boot and Postgres SQL for the BackEnd; JavaScript and Html-CSS for the FrontEnd, for its development 146 hours of coding were necessary and the following technologies were used:
+DwD is a web application developed for educational purposes, it was developed in JAVA 11 with Spring Boot and Postgres SQL for the BackEnd; JavaScript and Html-CSS for the FrontEnd, for its development 58 hours of coding were necessary and the following technologies were used:
 
 ##
 
